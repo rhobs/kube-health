@@ -53,9 +53,9 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/inecas/kube-health/pkg/analyze"
-	"github.com/inecas/kube-health/pkg/eval"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 type MyAnalyzer struct{}
@@ -105,12 +105,12 @@ to analyze and can be composed of multiple sub-resources:
 
 ```go
 import (
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/status"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/inecas/kube-health/pkg/analyze"
-	"github.com/inecas/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/eval"
 )
 
 type MyAnalyzer struct {

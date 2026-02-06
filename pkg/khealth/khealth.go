@@ -7,8 +7,8 @@ package khealth
 import (
 	"fmt"
 
-	"github.com/inecas/kube-health/pkg/analyze"
-	"github.com/inecas/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/eval"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/rest"
 )

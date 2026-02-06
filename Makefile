@@ -1,5 +1,5 @@
 NAME     := kube-health
-PACKAGE  := github.com/inecas/$(NAME)
+PACKAGE  := github.com/rhobs/$(NAME)
 VERSION  := v0.1.0
 GIT      := $(shell git rev-parse --short HEAD)
 DATE     := $(shell date +%FT%T%Z)

@@ -6,9 +6,9 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/inecas/kube-health/pkg/analyze"
-	"github.com/inecas/kube-health/pkg/eval"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 var (

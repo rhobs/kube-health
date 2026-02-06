@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/inecas/kube-health/pkg/eval"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 // PeriodicPrinter prints status updates to the terminal, as they arrive

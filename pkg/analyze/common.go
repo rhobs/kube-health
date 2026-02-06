@@ -8,8 +8,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/inecas/kube-health/pkg/eval"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 // ignoredGroupKinds is a list of GroupKinds that are ignored by the default

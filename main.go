@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/inecas/kube-health/cmd"
+	"github.com/rhobs/kube-health/cmd"
 )
 
 func main() {

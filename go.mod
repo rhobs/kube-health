@@ -1,4 +1,4 @@
-module github.com/inecas/kube-health
+module github.com/rhobs/kube-health
 
 go 1.25.0
 

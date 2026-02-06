@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 // StatusPoller polls the status of a set of objects at a regular interval.

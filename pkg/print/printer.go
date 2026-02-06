@@ -3,7 +3,7 @@ package print
 import (
 	"io"
 
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 type PrintOptions struct {
