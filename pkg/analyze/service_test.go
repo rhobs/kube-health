@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/inecas/kube-health/internal/test"
-	"github.com/inecas/kube-health/pkg/print"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/internal/test"
+	"github.com/rhobs/kube-health/pkg/print"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 func TestServiceAnalyzer(t *testing.T) {

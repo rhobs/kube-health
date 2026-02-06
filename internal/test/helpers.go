@@ -7,13 +7,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/inecas/kube-health/pkg/analyze"
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/status"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"sigs.k8s.io/yaml"
 
-	"github.com/inecas/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/eval"
 )
 
 func LoadObject[T any](p string) (*T, error) {

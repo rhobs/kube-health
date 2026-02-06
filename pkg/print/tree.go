@@ -12,7 +12,7 @@ import (
 
 	"k8s.io/utils/integer"
 
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 var (

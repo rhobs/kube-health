@@ -18,12 +18,12 @@ import (
 	"k8s.io/kubectl/pkg/cmd/util"
 	"k8s.io/kubectl/pkg/util/term"
 
-	"github.com/inecas/kube-health/pkg/analyze"
+	"github.com/rhobs/kube-health/pkg/analyze"
 	// Extra analyzers for Red Hat related projects.
-	_ "github.com/inecas/kube-health/pkg/analyze/redhat"
-	"github.com/inecas/kube-health/pkg/eval"
-	"github.com/inecas/kube-health/pkg/print"
-	"github.com/inecas/kube-health/pkg/status"
+	_ "github.com/rhobs/kube-health/pkg/analyze/redhat"
+	"github.com/rhobs/kube-health/pkg/eval"
+	"github.com/rhobs/kube-health/pkg/print"
+	"github.com/rhobs/kube-health/pkg/status"
 )
 
 var (

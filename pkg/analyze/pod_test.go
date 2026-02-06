@@ -3,10 +3,10 @@ package analyze_test
 import (
 	"testing"
 
-	"github.com/inecas/kube-health/pkg/status"
+	"github.com/rhobs/kube-health/pkg/status"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/inecas/kube-health/internal/test"
+	"github.com/rhobs/kube-health/internal/test"
 )
 
 func TestPodAnalyzer(t *testing.T) {

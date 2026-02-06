@@ -14,9 +14,9 @@ builds:
       - CGO_ENABLED=0
     ldflags:
       - -s -w
-      - -X github.com/inecas/kube-health/cmd.Version={{.Version}}
-      - -X github.com/inecas/kube-health/cmd.Commit={{.Commit}}
-      - -X github.com/inecas/kube-health/cmd.Date={{.Date}}
+      - -X github.com/rhobs/kube-health/cmd.Version={{.Version}}
+      - -X github.com/rhobs/kube-health/cmd.Commit={{.Commit}}
+      - -X github.com/rhobs/kube-health/cmd.Date={{.Date}}
 
   - id: kube-health-monitor
     binary: kube-health-monitor
@@ -25,9 +25,9 @@ builds:
       - darwin
     ldflags:
       - -s -w
-      - -X github.com/inecas/kube-health/cmd.Version={{.Version}}
-      - -X github.com/inecas/kube-health/cmd.Commit={{.Commit}}
-      - -X github.com/inecas/kube-health/cmd.Date={{.Date}}
+      - -X github.com/rhobs/kube-health/cmd.Version={{.Version}}
+      - -X github.com/rhobs/kube-health/cmd.Commit={{.Commit}}
+      - -X github.com/rhobs/kube-health/cmd.Date={{.Date}}
 
     main: ./cmd/monitor
 

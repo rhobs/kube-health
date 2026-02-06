@@ -19,10 +19,10 @@ different kinds.
 
 Use one of these methods:
 
-* Get binaries for Linux and Mac are available as tarballs from [the releases page](https://github.com/inecas/kube-health/releases).
+* Get binaries for Linux and Mac are available as tarballs from [the releases page](https://github.com/rhobs/kube-health/releases).
 * Using `go install`:
    ```shell
-   go install github.com/inecas/kube-health@latest
+   go install github.com/rhobs/kube-health@latest
    ```
 * Building from source with:
    ``` shell
@@ -98,7 +98,7 @@ health via monitoring stack.
 
 ![Grafana dashboard](./docs/grafana.png)
 
-1. Get the binaries for `kube-health-monitor` from [the releases page](https://github.com/inecas/kube-health/releases) or build it from source with:
+1. Get the binaries for `kube-health-monitor` from [the releases page](https://github.com/rhobs/kube-health/releases) or build it from source with:
    ``` shell
    make build-monitor
    ```
