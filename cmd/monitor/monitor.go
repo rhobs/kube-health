@@ -11,7 +11,6 @@ import (
 	"github.com/spf13/pflag"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/klog/v2"
-	"k8s.io/kubectl/pkg/cmd/util"
 
 	healthcmd "github.com/rhobs/kube-health/cmd"
 	"github.com/rhobs/kube-health/pkg/analyze"
@@ -83,9 +82,7 @@ func runFunc(fl *flags) func(cmd *cobra.Command, args []string) error {
 			return nil
 		}
 
-		f := util.NewFactory(fl.configFlags)
-
-		mapper, err := f.ToRESTMapper()
+		mapper, err := fl.configFlags.ToRESTMapper()
 		if err != nil {
 			return err
 		}
@@ -99,7 +96,7 @@ func runFunc(fl *flags) func(cmd *cobra.Command, args []string) error {
 		ctx, cancelFunc := context.WithCancel(ctx)
 		defer cancelFunc()
 
-		ldr, err := eval.NewRealLoader(f)
+		ldr, err := eval.NewRealLoader(fl.configFlags)
 		if err != nil {
 			return fmt.Errorf("Can't create loader: %w", err)
 		}

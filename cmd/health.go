@@ -11,14 +11,13 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"golang.org/x/term"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/cli-runtime/pkg/resource"
 	"k8s.io/klog/v2"
-	"k8s.io/kubectl/pkg/cmd/util"
-	"k8s.io/kubectl/pkg/util/term"
 
 	"github.com/rhobs/kube-health/pkg/analyze"
 	// Extra analyzers for Red Hat related projects.
@@ -127,9 +126,8 @@ func (f *flags) addPrintFlags(cmd *cobra.Command) {
 func (f *flags) printOpts() print.PrintOptions {
 	termWidth := f.width
 	if termWidth < 0 {
-		termsize := term.GetSize(os.Stdout.Fd())
-		if termsize != nil {
-			termWidth = int(termsize.Width)
+		if width, _, err := term.GetSize(int(os.Stdout.Fd())); err == nil {
+			termWidth = width
 		}
 	}
 	po := print.PrintOptions{
@@ -174,9 +172,7 @@ func runFunc(fl *flags) func(cmd *cobra.Command, args []string) error {
 			posArgs = nil
 		}
 
-		f := util.NewFactory(fl.configFlags)
-
-		namespace, explicitNamespace, err := f.ToRawKubeConfigLoader().Namespace()
+		namespace, explicitNamespace, err := fl.configFlags.ToRawKubeConfigLoader().Namespace()
 		if err != nil {
 			return err
 		}
@@ -190,7 +186,7 @@ func runFunc(fl *flags) func(cmd *cobra.Command, args []string) error {
 		ctx, cancelFunc := context.WithCancel(ctx)
 		defer cancelFunc()
 
-		ldr, err := eval.NewRealLoader(f)
+		ldr, err := eval.NewRealLoader(fl.configFlags)
 		if err != nil {
 			return fmt.Errorf("Can't create loader: %w", err)
 		}
